@@ -20,11 +20,11 @@ x_pred=260
 y_pred1= model.predict([[x_pred]])
 print(y_pred1)
 
-
-plt.scatter(x, y)
-plt.plot(x, y_pred, color='black')
-plt.scatter(x_pred, y_pred1, color='Red')
+plt.figure(figsize=(10, 10))
+plt.scatter(x, y,label=" Productivity compared to Rainfall",color='#CD661D')
+plt.plot(x, y_pred, color='black',label="Linear regression line")
+plt.scatter(x_pred, y_pred1, color='#9400D3',label=" Prediciton Point")
 plt.xlabel("Rainfall")
 plt.ylabel("Productivity")
+plt.legend()
 plt.show()
-
